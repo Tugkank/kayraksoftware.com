@@ -2,28 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-md py-2" : "bg-white/80 backdrop-blur-md py-4"
-        }`}
+      className="fixed top-0 left-0 w-full z-50 bg-neutral-900/90 backdrop-blur-md shadow-md py-2"
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
@@ -32,9 +16,9 @@ const Navbar = () => {
             <Image
               src="/logo.png"
               alt="Kayrak Software Logo"
-              width={234}
-              height={78}
-              className="h-16 w-auto object-contain"
+              width={293}
+              height={98}
+              className="h-20 w-auto object-contain"
               priority
             />
           </Link>
@@ -44,22 +28,22 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           {[
             { name: "ANASAYFA", href: "/" },
-            { name: "HİZMETLERİMİZ", href: "#hizmetlerimiz" },
-            { name: "HAKKIMIZDA", href: "#hakkimizda" },
+            { name: "HİZMETLERİMİZ", href: "/hizmetlerimiz" },
+            { name: "HAKKIMIZDA", href: "/hakkimizda" },
           ].map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="relative text-gray-700 hover:text-black transition-colors duration-300 font-medium text-sm tracking-widest group"
+              className="relative text-gray-300 hover:text-white transition-colors duration-300 font-medium text-sm tracking-widest group"
             >
               {item.name}
-              <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
 
           <Link
-            href="#iletisim"
-            className="px-6 py-2 bg-black text-white font-semibold text-sm tracking-widest rounded-full hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            href="/iletisim"
+            className="px-6 py-2 bg-white text-black font-semibold text-sm tracking-widest rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 shadow-[0_0_15px_rgba(255,255,255,0.3)]"
           >
             İLETİŞİM
           </Link>
