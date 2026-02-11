@@ -22,19 +22,19 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-black/80 backdrop-blur-md" : "bg-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-md py-2" : "bg-white/80 backdrop-blur-md py-4"
         }`}
     >
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/">
             <Image
               src="/logo.png"
               alt="Kayrak Software Logo"
-              width={180}
-              height={60}
-              className="h-12 w-auto object-contain"
+              width={234}
+              height={78}
+              className="h-16 w-auto object-contain"
               priority
             />
           </Link>
@@ -50,16 +50,16 @@ const Navbar = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="relative text-gray-300 hover:text-white transition-colors duration-300 font-medium text-sm tracking-widest group"
+              className="relative text-gray-700 hover:text-black transition-colors duration-300 font-medium text-sm tracking-widest group"
             >
               {item.name}
-              <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
 
           <Link
             href="#iletisim"
-            className="px-6 py-2 bg-white text-black font-semibold text-sm tracking-widest rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+            className="px-6 py-2 bg-black text-white font-semibold text-sm tracking-widest rounded-full hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             İLETİŞİM
           </Link>
