@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import WhyUs from "@/components/WhyUs";
 import MissionVision from "@/components/MissionVision";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <WhyUs />
       <MissionVision />
+      <Testimonials />
     </main>
   );
 }

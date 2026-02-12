@@ -104,10 +104,7 @@ const Footer = () => {
                     <p className="text-neutral-500 text-sm mb-4 md:mb-0">
                         © {new Date().getFullYear()} Kayrak Software. Tüm halkarı saklıdır.
                     </p>
-                    <div className="flex space-x-6 text-sm text-neutral-500">
-                        <Link href="#" className="hover:text-white transition-colors">Gizlilik Politikası</Link>
-                        <Link href="#" className="hover:text-white transition-colors">Kullanım Şartları</Link>
-                    </div>
+
                 </div>
             </div>
         </footer>
