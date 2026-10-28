@@ -89,7 +89,9 @@ const Footer = () => {
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Phone className="w-5 h-5 text-indigo-500" />
-                                <span className="text-neutral-400 text-sm">+90 537 428 1563</span>
+                                <a href="tel:+905374281563" className="text-neutral-400 hover:text-white text-sm transition-colors">
+                                    +90 537 428 1563
+                                </a>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Mail className="w-5 h-5 text-indigo-500" />
@@ -104,7 +106,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                     <p className="text-neutral-500 text-sm mb-4 md:mb-0">
-                        © {new Date().getFullYear()} Kayrak Software. Tüm halkarı saklıdır.
+                        © {new Date().getFullYear()} Kayrak Software. Tüm hakları saklıdır.
                     </p>
 
                 </div>

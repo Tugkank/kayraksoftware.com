@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -13,6 +14,11 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     if (open) {
@@ -69,6 +75,7 @@ const Navbar = () => {
             className="md:hidden p-2 text-white rounded-lg hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
             onClick={() => setOpen((prev) => !prev)}
             aria-expanded={open}
+            aria-controls="mobile-nav-menu"
             aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -77,34 +84,38 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="md:hidden fixed inset-0 top-[60px] sm:top-[64px] z-40 bg-black/50" aria-hidden onClick={closeMenu} />
-      )}
-
-      <div
-        className={`md:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out bg-neutral-900 border-t border-neutral-800 ${
-          open ? "max-h-[420px]" : "max-h-0"
-        }`}
-      >
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1">
-          {navLinks.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              onClick={closeMenu}
-              className="py-3 text-gray-200 hover:text-white font-medium text-sm tracking-wider border-b border-neutral-800 last:border-0"
-            >
-              {item.name}
-            </Link>
-          ))}
-          <Link
-            href="/iletisim"
+        <>
+          <div
+            className="md:hidden fixed inset-x-0 bottom-0 top-14 sm:top-16 z-[60] bg-black/50"
+            aria-hidden
             onClick={closeMenu}
-            className="mt-3 py-3 text-center bg-white text-black font-semibold text-sm tracking-widest rounded-full hover:bg-gray-200 transition-colors"
+          />
+          <div
+            id="mobile-nav-menu"
+            className="md:hidden relative z-[70] bg-neutral-900 border-t border-neutral-800 shadow-xl"
           >
-            İLETİŞİM
-          </Link>
-        </div>
-      </div>
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1">
+              {navLinks.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={closeMenu}
+                  className="block py-3 text-gray-200 hover:text-white font-medium text-sm tracking-wider border-b border-neutral-800"
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <Link
+                href="/iletisim"
+                onClick={closeMenu}
+                className="mt-3 block py-3 text-center bg-white text-black font-semibold text-sm tracking-widest rounded-full hover:bg-gray-200 transition-colors"
+              >
+                İLETİŞİM
+              </Link>
+            </div>
+          </div>
+        </>
+      )}
     </nav>
   );
 };
