@@ -76,9 +76,9 @@ const Contact = () => {
                         <div className="relative z-10 mt-12">
                             <h3 className="text-lg font-semibold mb-4">Sosyal Medya</h3>
                             <div className="flex space-x-4">
-                                {[<Facebook key="fb" />, <Twitter key="tw" />, <Instagram key="ig" />, <Linkedin key="li" />].map((icon, i) => (
+                                {[Facebook, Twitter, Instagram, Linkedin].map((SocialIcon, i) => (
                                     <a key={i} href="#" className="p-2 bg-white/10 rounded-full hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:-translate-y-1">
-                                        {React.cloneElement(icon as React.ReactElement, { className: "w-5 h-5" })}
+                                        <SocialIcon className="w-5 h-5" />
                                     </a>
                                 ))}
                             </div>

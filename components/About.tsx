@@ -81,24 +81,27 @@ const About = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
-                            { step: "01", title: "Analiz & Planlama", desc: "İhtiyaçlarınızı dinliyor, stratejik yol haritasını belirliyoruz.", icon: <Target /> },
-                            { step: "02", title: "Tasarım & UX", desc: "Kullanıcı deneyimini ön planda tutan modern arayüzler tasarlıyoruz.", icon: <Layers /> },
-                            { step: "03", title: "Geliştirme", desc: "Clean code prensipleriyle güçlü ve güvenli altyapıyı kuruyoruz.", icon: <Cpu /> },
-                            { step: "04", title: "Test & Teslimat", desc: "Detaylı test süreçlerinden sonra projenizi canlıya alıyoruz.", icon: <Rocket /> }
-                        ].map((item, index) => (
+                            { step: "01", title: "Analiz & Planlama", desc: "İhtiyaçlarınızı dinliyor, stratejik yol haritasını belirliyoruz.", icon: Target },
+                            { step: "02", title: "Tasarım & UX", desc: "Kullanıcı deneyimini ön planda tutan modern arayüzler tasarlıyoruz.", icon: Layers },
+                            { step: "03", title: "Geliştirme", desc: "Clean code prensipleriyle güçlü ve güvenli altyapıyı kuruyoruz.", icon: Cpu },
+                            { step: "04", title: "Test & Teslimat", desc: "Detaylı test süreçlerinden sonra projenizi canlıya alıyoruz.", icon: Rocket }
+                        ].map((item, index) => {
+                            const StepIcon = item.icon;
+                            return (
                             <div key={index} className="relative bg-white dark:bg-zinc-900 p-8 rounded-2xl shadow-lg border border-zinc-100 dark:border-zinc-800 group hover:-translate-y-2 transition-transform duration-300">
                                 <div className="absolute top-4 right-4 text-5xl font-bold text-zinc-100 dark:text-zinc-800 select-none group-hover:text-indigo-500/10 transition-colors">
                                     {item.step}
                                 </div>
                                 <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center mb-6 text-indigo-600 dark:text-indigo-400">
-                                    {React.cloneElement(item.icon as React.ReactElement, { className: "w-6 h-6" })}
+                                    <StepIcon className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-3 relative z-10">{item.title}</h3>
                                 <p className="text-zinc-600 dark:text-zinc-400 text-sm relative z-10">
                                     {item.desc}
                                 </p>
                             </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </div>

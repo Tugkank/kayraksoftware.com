@@ -166,25 +166,28 @@ const Services = () => {
 
                         <div className="w-full md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {[
-                                { title: "Makine Öğrenimi", desc: "Verilerden öğrenen akıllı algoritmalar.", icon: <Cpu /> },
-                                { title: "Doğal Dil İşleme (NLP)", desc: "Metin ve konuşma anlama sistemleri.", icon: <Search /> },
-                                { title: "Görüntü İşleme", desc: "Görsel veri analizi ve tanıma.", icon: <Layers /> },
-                                { title: "Özelleştirilmiş AI", desc: "İşinize özel yapay zeka modelleri.", icon: <BrainCircuit /> },
-                                { title: "Model Geliştirme", desc: "Yüksek doğruluklu tahmin modelleri.", icon: <BarChart /> },
-                                { title: "Veri Analizi", desc: "Büyük veri işleme ve anlamlandırma.", icon: <Database /> },
-                                { title: "Metin Analizi", desc: "İçerik sınıflandırma ve özetleme.", icon: <PenTool /> },
-                                { title: "Chatbot Geliştirme", desc: "7/24 hizmet veren akıllı asistanlar.", icon: <Bot /> }
-                            ].map((item, index) => (
+                                { title: "Makine Öğrenimi", desc: "Verilerden öğrenen akıllı algoritmalar.", icon: Cpu },
+                                { title: "Doğal Dil İşleme (NLP)", desc: "Metin ve konuşma anlama sistemleri.", icon: Search },
+                                { title: "Görüntü İşleme", desc: "Görsel veri analizi ve tanıma.", icon: Layers },
+                                { title: "Özelleştirilmiş AI", desc: "İşinize özel yapay zeka modelleri.", icon: BrainCircuit },
+                                { title: "Model Geliştirme", desc: "Yüksek doğruluklu tahmin modelleri.", icon: BarChart },
+                                { title: "Veri Analizi", desc: "Büyük veri işleme ve anlamlandırma.", icon: Database },
+                                { title: "Metin Analizi", desc: "İçerik sınıflandırma ve özetleme.", icon: PenTool },
+                                { title: "Chatbot Geliştirme", desc: "7/24 hizmet veren akıllı asistanlar.", icon: Bot }
+                            ].map((item, index) => {
+                                const ItemIcon = item.icon;
+                                return (
                                 <div key={index} className="p-6 bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-xl hover:border-indigo-500/50 transition-colors group shadow-sm">
                                     <div className="flex items-center mb-4 text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-500 dark:group-hover:text-indigo-300">
-                                        {React.cloneElement(item.icon as React.ReactElement, { className: "w-6 h-6 mr-3" })}
+                                        <ItemIcon className="w-6 h-6 mr-3" />
                                         <h4 className="font-bold text-zinc-900 dark:text-white">{item.title}</h4>
                                     </div>
                                     <p className="text-zinc-500 dark:text-zinc-400 text-sm group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
                                         {item.desc}
                                     </p>
                                 </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
