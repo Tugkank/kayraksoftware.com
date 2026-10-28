@@ -6,7 +6,7 @@ import {
 
 const Contact = () => {
     return (
-        <section className="relative w-full bg-zinc-50 dark:bg-black min-h-screen flex items-center justify-center py-24 px-6 overflow-hidden">
+        <section className="relative w-full bg-zinc-50 dark:bg-black min-h-screen flex items-center justify-center pt-24 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
 
             {/* Background Decor */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -16,10 +16,10 @@ const Contact = () => {
 
             <div className="container mx-auto z-10 max-w-6xl">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white mb-4 tracking-tight">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white mb-4 tracking-tight">
                         Bizimle <span className="text-indigo-600 dark:text-indigo-400">İletişime Geçin</span>
                     </h1>
-                    <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+                    <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto px-2">
                         Projeleriniz, sorularınız veya iş birlikleri için buradayız.
                         Aşağıdaki formu doldurun veya iletişim kanallarımızdan bize ulaşın.
                     </p>
@@ -28,7 +28,7 @@ const Contact = () => {
                 <div className="flex flex-col lg:flex-row bg-white dark:bg-zinc-900 rounded-3xl shadow-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
 
                     {/* Left Side: Contact Info */}
-                    <div className="w-full lg:w-2/5 bg-indigo-600 p-10 text-white flex flex-col justify-between relative overflow-hidden">
+                    <div className="w-full lg:w-2/5 bg-indigo-600 p-6 sm:p-10 text-white flex flex-col justify-between relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 to-blue-700 opacity-90"></div>
                         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
 
@@ -89,7 +89,7 @@ const Contact = () => {
                     </div>
 
                     {/* Right Side: Form */}
-                    <div className="w-full lg:w-3/5 p-10 bg-white dark:bg-zinc-900">
+                    <div className="w-full lg:w-3/5 p-6 sm:p-10 bg-white dark:bg-zinc-900">
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">

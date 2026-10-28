@@ -21,7 +21,7 @@ const WhyUs = () => {
     ];
 
     return (
-        <section id="neden-biz" className="relative w-full py-24 overflow-hidden bg-zinc-50 dark:bg-black">
+        <section id="neden-biz" className="relative w-full py-16 sm:py-24 overflow-hidden bg-zinc-50 dark:bg-black">
             {/* Background Elements */}
             <div className="absolute inset-0 z-0">
                 {/* Grid Pattern */}
@@ -32,9 +32,9 @@ const WhyUs = () => {
                 <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-400/20 dark:bg-purple-600/10 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2"></div>
             </div>
 
-            <div className="container relative z-10 mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-white tracking-tight mb-4">
+            <div className="container relative z-10 mx-auto px-4 sm:px-6">
+                <div className="text-center mb-12 sm:mb-16">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-zinc-900 dark:text-white tracking-tight mb-4">
                         Neden Biz?
                     </h2>
                     <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full"></div>
@@ -44,13 +44,13 @@ const WhyUs = () => {
                     {cards.map((card, index) => (
                         <div
                             key={index}
-                            className="bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-white/20 dark:border-zinc-800 flex flex-col items-center text-center group"
+                            className="bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-white/20 dark:border-zinc-800 flex flex-col items-center text-center group"
                         >
                             <div className="w-16 h-16 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/40 dark:to-blue-800/20 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 transform rotate-3 group-hover:rotate-6">
                                 {/* Updated Icon Style */}
                                 <div className="w-8 h-8 border-2 border-blue-500 dark:border-blue-400 rounded-lg transform rotate-45 group-hover:rotate-90 transition-transform duration-500"></div>
                             </div>
-                            <h3 className="text-xl font-bold mb-4 text-zinc-900 dark:text-white">
+                            <h3 className="text-lg sm:text-xl font-bold mb-4 text-zinc-900 dark:text-white">
                                 {card.title}
                             </h3>
                             <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">

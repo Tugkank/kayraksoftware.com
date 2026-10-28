@@ -2,11 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 
+const socialIcons = [Facebook, Twitter, Instagram, Linkedin];
+
 const Footer = () => {
     return (
-        <footer className="bg-neutral-900 border-t border-neutral-800 text-white pt-16 pb-8">
-            <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <footer className="bg-neutral-900 border-t border-neutral-800 text-white pt-12 sm:pt-16 pb-8">
+            <div className="container mx-auto px-4 sm:px-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12 sm:mb-16">
 
                     {/* Brand Section */}
                     <div className="space-y-6">
@@ -25,9 +27,9 @@ const Footer = () => {
                             Geleceği bugünden kodluyoruz.
                         </p>
                         <div className="flex space-x-4">
-                            {[<Facebook key="fb" />, <Twitter key="tw" />, <Instagram key="ig" />, <Linkedin key="li" />].map((icon, i) => (
+                            {socialIcons.map((Icon, i) => (
                                 <a key={i} href="#" className="p-2 bg-neutral-800 rounded-lg hover:bg-indigo-600 hover:text-white text-neutral-400 transition-all duration-300">
-                                    {icon}
+                                    <Icon className="w-5 h-5" />
                                 </a>
                             ))}
                         </div>
@@ -100,7 +102,7 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                     <p className="text-neutral-500 text-sm mb-4 md:mb-0">
                         © {new Date().getFullYear()} Kayrak Software. Tüm halkarı saklıdır.
                     </p>

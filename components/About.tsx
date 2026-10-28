@@ -11,14 +11,14 @@ const About = () => {
         <section className="relative w-full bg-white dark:bg-black overflow-hidden font-sans">
 
             {/* 1. HERO / GLOBAL MINDSET */}
-            <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 container mx-auto px-6">
+            <div className="relative pt-20 sm:pt-24 pb-16 md:pt-32 md:pb-24 container mx-auto px-4 sm:px-6">
                 <div className="flex flex-col lg:flex-row items-center gap-12">
                     <div className="w-full lg:w-1/2 z-10">
                         <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-semibold mb-6">
                             <Globe2 className="w-4 h-4 mr-2" />
                             Global Vizyon, Yerel Çözümler
                         </div>
-                        <h1 className="text-4xl md:text-6xl font-extrabold text-zinc-900 dark:text-white mb-6 tracking-tight leading-tight">
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-zinc-900 dark:text-white mb-6 tracking-tight leading-tight">
                             Dijital Dönüşümün <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
                                 Gücüyle Büyüyün
@@ -192,16 +192,16 @@ const About = () => {
             {/* 4. İSTATİSTİKLER (STATS) */}
             <div className="py-16 bg-gradient-to-r from-indigo-900 to-blue-900 text-white relative">
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center md:divide-x md:divide-white/10">
                         {[
                             { number: "50+", label: "Tamamlanan Proje", icon: <CheckCircle /> },
                             { number: "%100", label: "Müşteri Memnuniyeti", icon: <Users /> },
                             { number: "7/24", label: "Teknik Destek", icon: <RefreshCw /> },
                             { number: "5+", label: "Yıl Deneyim", icon: <BarChart3 /> }
                         ].map((stat, index) => (
-                            <div key={index} className="px-4">
-                                <div className="text-3xl md:text-5xl font-bold mb-2">{stat.number}</div>
-                                <div className="text-indigo-200 text-sm md:text-base font-medium">{stat.label}</div>
+                            <div key={index} className="px-2 sm:px-4 py-3 md:py-0 border-b border-white/10 md:border-b-0 last:border-b-0">
+                                <div className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">{stat.number}</div>
+                                <div className="text-indigo-200 text-xs sm:text-sm md:text-base font-medium leading-snug">{stat.label}</div>
                             </div>
                         ))}
                     </div>

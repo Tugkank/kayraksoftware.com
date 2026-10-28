@@ -3,7 +3,7 @@ import { Target, Globe, Lightbulb, Zap } from 'lucide-react';
 
 const MissionVision = () => {
     return (
-        <section className="py-20 bg-zinc-50 dark:bg-black overflow-hidden relative">
+        <section className="py-16 sm:py-20 bg-zinc-50 dark:bg-black overflow-hidden relative">
 
             {/* Background Decorations */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -23,7 +23,7 @@ const MissionVision = () => {
                             <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">Misyonumuz</h2>
                         </div>
 
-                        <div className="space-y-4 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">
+                        <div className="space-y-4 text-zinc-600 dark:text-zinc-400 text-base sm:text-lg leading-relaxed">
                             <p>
                                 Teknolojiyi sadece kod yazmak olarak değil, <span className="font-semibold text-zinc-900 dark:text-white">problem çözme sanatı</span> olarak görüyoruz.
                                 İşletmelerin ihtiyaçlarını doğru analiz ederek; sürdürülebilir, ölçeklenebilir ve güvenli yazılım çözümleri geliştiriyoruz.
@@ -50,7 +50,7 @@ const MissionVision = () => {
                             <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">Vizyonumuz</h2>
                         </div>
 
-                        <div className="space-y-4 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">
+                        <div className="space-y-4 text-zinc-600 dark:text-zinc-400 text-base sm:text-lg leading-relaxed">
                             <p>
                                 Yenilikçi teknolojileri yakından takip eden ve uygulayan, <span className="font-semibold text-zinc-900 dark:text-white">global ölçekte rekabet edebilen</span> bir yazılım markası olmak.
                             </p>

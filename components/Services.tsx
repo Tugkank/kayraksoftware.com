@@ -12,11 +12,11 @@ const Services = () => {
         <section className="relative w-full bg-zinc-50 dark:bg-black overflow-hidden">
 
             {/* Hero Section of Services */}
-            <div className="relative py-20 lg:py-32 container mx-auto px-6 text-center z-10">
-                <h1 className="text-5xl md:text-6xl font-extrabold text-zinc-900 dark:text-white mb-6 tracking-tight">
+            <div className="relative py-16 sm:py-20 lg:py-32 container mx-auto px-4 sm:px-6 text-center z-10">
+                <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-zinc-900 dark:text-white mb-6 tracking-tight">
                     Dijital Geleceğinizi <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">İnşa Ediyoruz</span>
                 </h1>
-                <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-base sm:text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed px-2">
                     Yazılımdan yapay zekaya, tasarımdan SEO optimizasyonuna kadar uçtan uca dijital çözümler sunuyoruz.
                 </p>
             </div>
@@ -24,12 +24,12 @@ const Services = () => {
             {/* 1. YAZILIM */}
             <div className="py-16 md:py-24 bg-white dark:bg-zinc-900/50 border-y border-zinc-200 dark:border-zinc-800">
                 <div className="container mx-auto px-6">
-                    <div className="flex flex-col md:flex-row items-center mb-16">
-                        <div className="p-4 bg-blue-100 dark:bg-blue-900/30 rounded-2xl mr-6">
+                    <div className="flex flex-col sm:flex-row sm:items-center mb-12 md:mb-16 gap-4">
+                        <div className="p-4 bg-blue-100 dark:bg-blue-900/30 rounded-2xl w-fit shrink-0">
                             <Code2 className="w-10 h-10 text-blue-600 dark:text-blue-400" />
                         </div>
                         <div>
-                            <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-2">Yazılım Geliştirme</h2>
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-2">Yazılım Geliştirme</h2>
                             <p className="text-zinc-500 dark:text-zinc-400">İşiniz için en modern ve ölçeklenebilir teknolojiler.</p>
                         </div>
                     </div>
@@ -124,7 +124,7 @@ const Services = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
                         {[
                             { title: "Grafik Tasarım", icon: <PenTool className="w-6 h-6" /> },
                             { title: "Reklam Tasarımı", icon: <Layers className="w-6 h-6" /> },
@@ -133,11 +133,11 @@ const Services = () => {
                             { title: "Afiş ve Broşür", icon: <Palette className="w-6 h-6" /> },
                             { title: "Sosyal Medya", icon: <Globe className="w-6 h-6" /> }
                         ].map((item, index) => (
-                            <div key={index} className="p-6 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl hover:bg-pink-50 dark:hover:bg-pink-900/20 transition-colors text-center group cursor-pointer border border-zinc-100 dark:border-zinc-800 hover:border-pink-200">
+                            <div key={index} className="p-4 sm:p-6 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl hover:bg-pink-50 dark:hover:bg-pink-900/20 transition-colors text-center group cursor-pointer border border-zinc-100 dark:border-zinc-800 hover:border-pink-200">
                                 <div className="w-12 h-12 bg-white dark:bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm group-hover:scale-110 transition-transform text-pink-500">
                                     {item.icon}
                                 </div>
-                                <h4 className="font-semibold text-zinc-800 dark:text-zinc-200">{item.title}</h4>
+                                <h4 className="font-semibold text-sm sm:text-base text-zinc-800 dark:text-zinc-200">{item.title}</h4>
                             </div>
                         ))}
                     </div>
@@ -152,11 +152,11 @@ const Services = () => {
                 <div className="container relative mx-auto px-6 z-10">
                     <div className="flex flex-col md:flex-row items-start gap-12">
                         <div className="w-full md:w-1/3">
-                            <div className="sticky top-24">
+                            <div className="md:sticky md:top-24">
                                 <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-500/20 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm border border-indigo-200 dark:border-indigo-500/30">
                                     <BrainCircuit className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
                                 </div>
-                                <h2 className="text-3xl md:text-5xl font-bold text-zinc-900 dark:text-white mb-6">Yapay Zeka Teknolojileri</h2>
+                                <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-zinc-900 dark:text-white mb-6">Yapay Zeka Teknolojileri</h2>
                                 <p className="text-zinc-600 dark:text-zinc-400 text-lg mb-8 leading-relaxed">
                                     Geleceğin teknolojisini iş süreçlerinize entegre edin. Yapay zeka çözümlerimizle verimliliğinizi artırın
                                     ve rakiplerinizden bir adım öne geçin.
@@ -178,9 +178,9 @@ const Services = () => {
                                 const ItemIcon = item.icon;
                                 return (
                                 <div key={index} className="p-6 bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-xl hover:border-indigo-500/50 transition-colors group shadow-sm">
-                                    <div className="flex items-center mb-4 text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-500 dark:group-hover:text-indigo-300">
-                                        <ItemIcon className="w-6 h-6 mr-3" />
-                                        <h4 className="font-bold text-zinc-900 dark:text-white">{item.title}</h4>
+                                    <div className="flex items-start sm:items-center mb-4 text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-500 dark:group-hover:text-indigo-300 gap-2">
+                                        <ItemIcon className="w-6 h-6 shrink-0 sm:mr-1" />
+                                        <h4 className="font-bold text-zinc-900 dark:text-white text-base sm:text-lg leading-snug">{item.title}</h4>
                                     </div>
                                     <p className="text-zinc-500 dark:text-zinc-400 text-sm group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
                                         {item.desc}
@@ -199,12 +199,12 @@ const Services = () => {
 
 // Helper Component for Service Cards (Software Section)
 const ServiceCard = ({ title, icon, items }: { title: string, icon: React.ReactNode, items: string[] }) => (
-    <div className="bg-white dark:bg-zinc-800 p-8 rounded-2xl shadow-lg border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all hover:-translate-y-1">
-        <div className="flex items-center mb-6">
-            <div className="w-12 h-12 bg-zinc-50 dark:bg-zinc-900 rounded-lg flex items-center justify-center mr-4">
+    <div className="bg-white dark:bg-zinc-800 p-6 sm:p-8 rounded-2xl shadow-lg border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all hover:-translate-y-1">
+        <div className="flex flex-col sm:flex-row sm:items-center mb-6 gap-3">
+            <div className="w-12 h-12 bg-zinc-50 dark:bg-zinc-900 rounded-lg flex items-center justify-center sm:mr-4 shrink-0">
                 {icon}
             </div>
-            <h3 className="text-xl font-bold text-zinc-900 dark:text-white">{title}</h3>
+            <h3 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white">{title}</h3>
         </div>
         <ul className="space-y-3">
             {items.map((item, index) => (

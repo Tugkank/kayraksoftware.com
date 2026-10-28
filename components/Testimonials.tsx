@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Testimonials = () => {
     return (
-        <section className="py-24 bg-white dark:bg-zinc-900/50 relative overflow-hidden">
+        <section className="py-16 sm:py-24 bg-white dark:bg-zinc-900/50 relative overflow-hidden">
 
             {/* Header */}
             <div className="container mx-auto px-6 mb-16 text-center relative z-10">
@@ -52,7 +52,7 @@ const Testimonials = () => {
                                 ))}
                             </div>
 
-                            <p className="text-zinc-600 dark:text-zinc-300 mb-8 relative z-10 leading-relaxed min-h-[100px]">
+                            <p className="text-zinc-600 dark:text-zinc-300 mb-8 relative z-10 leading-relaxed min-h-0 md:min-h-[100px]">
                                 "{review.content}"
                             </p>
 
